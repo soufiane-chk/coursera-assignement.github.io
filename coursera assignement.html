@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+.title {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    border: 1px solid black;
+}
+
+
+p {
+    margin-top: 40px; 
+}
+
+
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 32%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+        float: left;
+    }
+    .section:nth-child(3) {
+        clear: both;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Delicious Foods</h1>
+
+    <div class="section chicken">
+        <div class="title">Chicken</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt tincidunt purus non tincidunt.</p>
+    </div>
+
+    <div class="section beef">
+        <div class="title">Beef</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Ut et nisi a leo auctor gravida.</p>
+    </div>
+
+    <div class="section sushi">
+        <div class="title">Sushi</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat eget lacus cursus varius.</p>
+    </div>
+
+</body>
+</html>
